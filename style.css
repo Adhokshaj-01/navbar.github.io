@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100&display=swap');
+*
+{
+    margin: 0; 
+    padding: 0;
+    cursor: none; 
+    font-family: 'Poppins', sans-serif;
+    box-sizing:border-box;
+}
+:root{
+    --red:#ee4d90;
+    --purple:rgb(109, 1, 151);
+    --light:rgb(253, 253, 253);
+    --dark:#101820FF;
+}
+body{
+    background-color: var(--dark)
+}
+.cursor{
+    position: absolute;
+    height: 40px;
+    width: 40px;
+    background-color: #f0327171;
+    border-radius: 50%;
+    transform: translate(-50% , -50%);
+    top: -10%;
+    pointer-events: none;
+    transition:  all .2s;
+    z-index: 9999999;
+    }
+.cursor2{
+        position: absolute;
+        height: 10px;
+        width:10px;
+        background: #f0326bd7;
+        border-radius: 50%;
+        transform: translate(-50% , -50%);
+        top: -10%;
+        pointer-events: none;
+        transition:all .1s;
+        z-index: 9999999;
+}
+.main{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+/*--navbar--*/
+.nav{
+    flex: 7%;
+    
+}
+.mylis{ background-color:white;}
+.nav ul{
+    position: relative;
+    transform: translate(-50%,-50%);
+    left: 50%;top: 50%;
+    line-height: 120px;
+    border-radius: 10px;
+    border-top-right-radius: 50px ;
+    border-bottom-right-radius: 50px;
+
+}
+.nav ul>li{
+    position: relative;
+    list-style: none;
+    left: 10px;
+}
+.nav ul>li>a{
+   font-weight: bold;
+   color: black;
+   text-decoration: none;
+}
+.nav ul>li>a>.icon{
+    position: relative;
+    top: 10px;
+    left: 10px;
+    transition: all 0.6s;
+    
+}
+.nav ul>li>a>.text{
+    position: absolute;
+    left: 0px;
+    opacity: 0;
+    font-size: 15px;
+    color: black;
+    transition: ease-in 0.3s;
+    font-weight: 100000;
+    
+}
+.text{
+    font-weight: bold !important;
+}
+.nav ul>li.active .icon{left:65px;}
+.nav ul>li.active .text{opacity: 1;}
+        
+
+.ani{
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 28px;
+    left: 70px;
+    background-color:var(--red);
+    border-radius: 50%;
+    border: 5px solid var(--dark);
+    transition: ease-in 0.5s;
+    z-index: -1;
+}
+.nav ul li:nth-child(1).active ~ .ani{
+    top:28px;
+}
+.nav ul li:nth-child(2).active ~ .ani{
+    top:148.4px;
+}
+.nav ul li:nth-child(3).active ~ .ani{
+    top:266px;
+}
+.nav ul li:nth-child(4).active ~ .ani{
+    top:calc(28px * 13.9);
+}
+/*--nav-end--*/
+.home{
+    
+    height: 100vh;
+    flex: 95%;
+}
+
+
+
